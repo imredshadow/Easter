@@ -1,9 +1,12 @@
 //Jian Acol
 //This program will calculate the date easter falls on given a year after 1583
+import java.util.*;
+
 public class Easter{
     public static void main(String[] args) {
         //code goes here
-        int y = 2003;
+        Scanner scanner = new Scanner(System.in);
+        int y = scanner.nextInt();
         int a = y%19;
         System.out.println("a = "+a);
         int b = y/100;
@@ -32,5 +35,7 @@ public class Easter{
         System.out.println("n = "+n);
         int p = (h+r-7*m+114)%31;
         System.out.println("p = "+p);
+
+        System.out.println("Easter in "+y+" falls on "+n+"/"+(p+1));
     }
 }
